@@ -1,0 +1,98 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    background-image: linear-gradient(to bottom right, #00F490, #00BBC9);
+    font-weight: 300;
+}
+
+
+h1 {
+    font-family: "Abril Fatface", serif;
+    font-size: 4.35rem;
+
+}
+
+.jumbotron {
+    background-color: #ffffff00;
+}
+
+.dropshadow {
+    text-shadow: 0px 2px 2px rgba(0, 0, 0, 0.212);
+}
+
+.lead {
+    font-size: 2.2rem;
+    color: white;
+}
+
+.btn-outline-light:hover {
+    background-color: rgba(255, 255, 255, 0.548);
+}
+
+.my_transp_background {
+    background-color: rgb(145, 102, 102);
+}
+
+.navbar-nav .dropdown-menu {
+    background-color: #ffffffaa;
+}
+
+.my-white-border {
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.menu-font {
+    font-weight: 500;
+}
+
+.navbar-light .navbar-toggler {
+    border-color: white;
+}
+
+.navbar-light .navbar-toggler {
+    color: white;
+}
+
+.rem1size {
+    font-size: 1rem;
+}
+
+.butnav {
+    /* height: 50px; */
+    /* width: 50px; */
+    /* margin: 14px; */
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
+}
+
+.mybox1 {
+    background-color: orange;
+}
+
+.herobox {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-left: 1rem;
+    /* margin: 1rem; */
+}
+
+.herobox h2,
+.herobox p {
+    margin: 2rem 1rem;
+    text-align: center;
+}
+
+.myshadow {
+    box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034), 0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086), 0 100px 80px rgba(0, 0, 0, 0.12)
+}
+
+.myshadow:hover {
+    box-shadow: 0 20px 50px rgba(240, 46, 170, 0.7);
+}
+
+/* font-family: "Abril Fatface", serif;
+font-family: "Open Sans", sans-serif; */
+/* #00F490   #00BBC9 */
