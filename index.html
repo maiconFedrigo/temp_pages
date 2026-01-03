@@ -2,35 +2,374 @@
 <html lang="en">
 
 <head>
-    <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
-        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
-        rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
-    <title>Hello, world!</title>
 </head>
 
 <body>
-    <!-- Optional JavaScript -->
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Navbar</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Link</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Dropdown
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                        </li>
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+
+
+
+
+    <div class="container mt-4 mybox-custo ">
+        <div class="row bg-light">
+            <div class="col">
+                <div class="">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label">Base de Custo</label>
+                        <input type="text" class="form-control" id="exampleFormControlInput1"
+                            placeholder="custo/m²: Ex (CUB) R$ 3.100,00">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Construída Aberta</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_const_aberta"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="equivalencia_aberta"
+                                placeholder="Equivalência (fator), Ex: 1,0">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Aberta)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Construída Coberta</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_const_coberta"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="equivalencia_coberta"
+                                placeholder="Equivalência (fator), Ex: 1,0">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Coberta)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Construída Fechada</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_const_fechada"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="equivalencia_fechada"
+                                placeholder="Equivalência (fator), Ex: 1,0">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Fechada)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Adicional 1
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Percentual de acréscimo sobre valor construído</h5>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00</b>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="acrescimo" placeholder="Acréscimo: Ex 15%">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.750.000,00</b>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Adicional 2
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Demais custos diretos</h5>
+                        <p class="card-text">Valores incidentes diretamente sob o custo total.</p>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.750.000,00</b>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="acrescimo_direto"
+                                placeholder="Acréscimo direto: R$ 1.200.000,00">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 2.500.000,00</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light mt-5" role="alert">
+                    Custo total de construção: <b class="alert-link">R$ 2.500.000,00</b>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container mt-4 mybox-venda">
+        <div class="row">
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Res. Privativa Aberta</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_res_aberta_priv"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="vgv_res_aberta_priv"
+                                placeholder="Digite aqui o valor/m²...">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Aberta)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Res. Privativa Coberta</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_res_coberta_priv"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="vgv_res_coberta_priv"
+                                placeholder="Digite aqui o valor/m²...">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Coberta)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col d-flex justify-content-center mt-4">
+                <div class="card p-3 flex-fill" style="width: 16rem;">
+                    <img src="images/sample.png" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Área Res. Privativa Fechada</h5>
+                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
+                            the card’s content.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_res_fechada_priv"
+                                placeholder="Digite aqui a área...">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="vgv_res_fechada_priv"
+                                placeholder="Digite aqui o valor/m²...">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.500.000,00 (Fechada)</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Adicional 1
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Área Comercial Fechada + Coberta</h5>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="area_comercial"
+                                placeholder="Ex: 115m² (Fechado + Coberto)">
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="vgv_com"
+                                placeholder="Digite aqui o valor/m²...">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 1.750.000,00</b>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="card mt-3">
+                    <div class="card-header">
+                        Adicional 2
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Valor direto de outras fontes</h5>
+                        <p class="card-text">Total de venda de vagas, Hobby Boxes, entre outros.</p>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="acrescimo_direto_vgv"
+                                placeholder="Acréscimo direto: R$ 2.200.000,00">
+                        </div>
+                        <div class="alert alert-light" role="alert">
+                            Total: <b class="alert-link">R$ 2.500.000,00</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="alert alert-light mt-5" role="alert">
+                    VGV total: <b class="alert-link">R$ 2.500.000,00</b>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+    <div class="container mt-4 mybox-resultado">
+        <div class="row bg-light">
+            <div class="col">
+                <ol class="list-group list-group-numbered">
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Custo total de construção</div>
+                            Content for list item
+                        </div>
+                        <span class="badge text-bg-primary rounded-pill">R$ 2.750.000,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Valor Geral de Vendas</div>
+                            Content for list item
+                        </div>
+                        <span class="badge text-bg-primary rounded-pill">R$ 1.450.000,00</span>
+                    </li>
+                    <li class="list-group-item d-flex justify-content-between align-items-start">
+                        <div class="ms-2 me-auto">
+                            <div class="fw-bold">Resultado</div>
+                            Content for list item
+                        </div>
+                        <span class="badge text-bg-primary rounded-pill">R$ 1.234.000,00</span>
+                    </li>
+                </ol>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"
+        integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js"
-        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
         crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
-        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
         crossorigin="anonymous"></script>
+
 </body>
 
 </html>
