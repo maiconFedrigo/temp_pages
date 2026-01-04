@@ -1,43 +1,157 @@
 .mybox-custo {
-    background-color: rgb(176, 176, 176);
-    padding: 20px;
+    background-color: #5084a4;
+    border-radius: 15px;
+
 }
 
 .mybox-venda {
-    background-color: rgb(48, 91, 171);
-    padding: 20px;
+    background-color: #838383;
+    border-radius: 15px;
 }
 
 .mybox-resultado {
-    background-color: rgb(155, 74, 8);
-    padding: 20px;
+    background-color: #f0a397;
+    border-radius: 15px;
 }
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (max-width: 576px) {
     .mybox-custo {
-        background-color: rgb(134, 69, 255);
         padding: 20px;
         max-width: 500px;
     }
 
     .mybox-venda {
-        background-color: rgb(134, 69, 255);
         padding: 20px;
         max-width: 500px;
     }
 }
 
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.myborderradius {
+    border-radius: 5px;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.poppins-extralight {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+}
+
+.poppins-light {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.poppins-regular {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.poppins-medium {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.poppins-semibold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.poppins-bold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.poppins-extrabold {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+}
+
+.poppins-black {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.poppins-thin-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.poppins-extralight-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.poppins-light-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
+.poppins-regular-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+.poppins-medium-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.poppins-semibold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.poppins-bold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.poppins-extrabold-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+}
+
+.poppins-black-italic {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
 /* // Large devices (desktops, 992px and up) */
 @media (max-width: 992px) {
     .mybox-custo {
-        background-color: rgb(51, 24, 102);
         padding: 20px;
         max-width: 500px;
     }
 
     .mybox-venda {
-        background-color: rgb(134, 69, 255);
         padding: 20px;
         max-width: 500px;
     }
