@@ -48,28 +48,28 @@ const brl = (n) => `R$ ${_fmtBR(n, 2)}`;                 // R$ 1.234,56
 const m2  = (n) => `${_fmtBR(n, 2)}m²`;                  // 1.234,56m²
 const brlPorM2 = (n) => `R$ ${_fmtBR(n, 2)}/m²`;         // R$ 1.234,56/m²
 const percentBR = (n, digits = 2) => `${_fmtBR((Number(n) <= 1 && Number(n) >= -1) ? Number(n) * 100 : n, digits)}%`;
-
+const get_num_chars = (s) => Number(s.replace(".","").replace(",","."));
 
 function update() {
-    const cub_value = cub_el.value;
-    const area_const_aberta_value = area_const_aberta_el.value;
-    const equivalencia_aberta_value = equivalencia_aberta_el.value;
-    const area_const_coberta_value = area_const_coberta_el.value;
-    const equivalencia_coberta_value = equivalencia_coberta_el.value;
-    const area_const_fechada_value = area_const_fechada_el.value;
-    const equivalencia_fechada_value = equivalencia_fechada_el.value;
-    const acrescimo_value = acrescimo_el.value / 100;
-    const acrescimo_direto_value = acrescimo_direto_el.value;
+    const cub_value = get_num_chars(cub_el.value);
+    const area_const_aberta_value = get_num_chars(area_const_aberta_el.value);
+    const equivalencia_aberta_value = get_num_chars(equivalencia_aberta_el.value);
+    const area_const_coberta_value = get_num_chars(area_const_coberta_el.value);
+    const equivalencia_coberta_value = get_num_chars(equivalencia_coberta_el.value);
+    const area_const_fechada_value = get_num_chars(area_const_fechada_el.value);
+    const equivalencia_fechada_value = get_num_chars(equivalencia_fechada_el.value);
+    const acrescimo_value = get_num_chars(acrescimo_el.value) / 100;
+    const acrescimo_direto_value = get_num_chars(acrescimo_direto_el.value);
 
-    const area_res_aberta_priv_value = area_res_aberta_priv_el.value;
-    const vgv_res_aberta_priv_value = vgv_res_aberta_priv_el.value;
-    const area_res_coberta_priv_value = area_res_coberta_priv_el.value;
-    const vgv_res_coberta_priv_value = vgv_res_coberta_priv_el.value;
-    const area_res_fechada_priv_value = area_res_fechada_priv_el.value;
-    const vgv_res_fechada_priv_value = vgv_res_fechada_priv_el.value;
-    const area_comercial_value = area_comercial_el.value;
-    const vgv_com_value = vgv_com_el.value;
-    const acrescimo_direto_vgv_value = acrescimo_direto_vgv_el.value;
+    const area_res_aberta_priv_value = get_num_chars(area_res_aberta_priv_el.value);
+    const vgv_res_aberta_priv_value = get_num_chars(vgv_res_aberta_priv_el.value);
+    const area_res_coberta_priv_value = get_num_chars(area_res_coberta_priv_el.value);
+    const vgv_res_coberta_priv_value = get_num_chars(vgv_res_coberta_priv_el.value);
+    const area_res_fechada_priv_value = get_num_chars(area_res_fechada_priv_el.value);
+    const vgv_res_fechada_priv_value = get_num_chars(vgv_res_fechada_priv_el.value);
+    const area_comercial_value = get_num_chars(area_comercial_el.value);
+    const vgv_com_value = get_num_chars(vgv_com_el.value);
+    const acrescimo_direto_vgv_value = get_num_chars(acrescimo_direto_vgv_el.value);
 
     resultado_const_aberta = cub_value * equivalencia_aberta_value * area_const_aberta_value;
     resultado_const_coberta = cub_value * equivalencia_coberta_value * area_const_coberta_value;
@@ -100,9 +100,11 @@ function update() {
     resultado_vgv_res_aberto_add_1_el.textContent = brl(resultado_vgv_res_aberto_add_1);
     resultado_vgv_el.textContent = brl(resultado_vgv_res_aberto_add_1);
 
-    final_construcao_el.textContent = resultado_const_total_add_2;
-    final_vgv_el.textContent = resultado_vgv_res_aberto_add_1;
-    final_resultado_el.textContent = resultado_vgv_res_aberto_add_1 - resultado_const_total_add_2;
+    final_construcao_el.textContent = brl(resultado_const_total_add_2);
+    final_vgv_el.textContent = brl(resultado_vgv_res_aberto_add_1);
+    final_resultado_el.textContent = brl(resultado_vgv_res_aberto_add_1 - resultado_const_total_add_2);
+
+    // cub_el.value= brl(cub_value)
 
     console.clear();
     console.log(cub_value);
