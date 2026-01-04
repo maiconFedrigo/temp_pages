@@ -79,11 +79,11 @@ function get_num_chars(value) {
 function update() {
     const cub_value = get_num_chars(cub_el.value);
     const area_const_aberta_value = get_num_chars(area_const_aberta_el.value);
-    const equivalencia_aberta_value = get_num_chars(equivalencia_aberta_el.value);
+    const equivalencia_aberta_value = equivalencia_aberta_el.value;
     const area_const_coberta_value = get_num_chars(area_const_coberta_el.value);
-    const equivalencia_coberta_value = get_num_chars(equivalencia_coberta_el.value);
+    const equivalencia_coberta_value = equivalencia_coberta_el.value;
     const area_const_fechada_value = get_num_chars(area_const_fechada_el.value);
-    const equivalencia_fechada_value = get_num_chars(equivalencia_fechada_el.value);
+    const equivalencia_fechada_value = equivalencia_fechada_el.value;
     const acrescimo_value = get_num_chars(acrescimo_el.value) / 100;
     const acrescimo_direto_value = get_num_chars(acrescimo_direto_el.value);
 

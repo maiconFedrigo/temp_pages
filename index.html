@@ -83,7 +83,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">x</span>
-                            <input id="equivalencia_aberta" type="text" inputmode="numeric" class="form-control"
+                            <input id="equivalencia_aberta" type="number" class="form-control"
                                 placeholder="Ex: 0,25" aria-label="Username" aria-describedby="equivalencia_aberta">
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -107,7 +107,7 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">x</span>
-                            <input id="equivalencia_coberta" type="text" inputmode="numeric" class="form-control"
+                            <input id="equivalencia_coberta" type="number" class="form-control"
                                 placeholder="Ex: 0,70" aria-label="Username" aria-describedby="equivalencia_aberta">
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -131,8 +131,8 @@
                         </div>
                         <div class="input-group mb-3">
                             <span class="input-group-text">x</span>
-                            <input id="equivalencia_fechada"  type="text" inputmode="numeric" class="form-control"
-                                placeholder="Ex: 1,00" aria-label="Username" aria-describedby="equivalencia_aberta">
+                            <input id="equivalencia_fechada"  type="number" class="form-control"
+                                placeholder="Ex: 1,00" aria-label="Username">
                         </div>
                         <div class="alert alert-light" role="alert">
                             Total: <b class="alert-link" id="resultado_const_fechada">R$ 1.500.000,00 (Fechada)</b>
@@ -180,7 +180,7 @@
                             <span class="input-group-text">R$</span>
                             <input id="acrescimo_direto" type="text" inputmode="numeric" class="form-control"
                                 placeholder="Ex: 1.200.000,00" aria-label="Username"
-                                aria-describedby="equivalencia_aberta">
+                                >
                         </div>
                         <div class="alert alert-light" role="alert">
                             Total: <b class="alert-link" id="resultado_const_total_add_2">R$ 2.500.000,00</b>
@@ -217,7 +217,7 @@
                             <span class="input-group-text">R$</span>
                             <input id="vgv_res_aberta_priv" type="text" inputmode="numeric"
                                 class="form-control text-center" placeholder="Ex: 5.000,00" aria-label="Username"
-                                aria-describedby="equivalencia_fechada">
+                                >
                             <span class="input-group-text">/m²</span>
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -243,7 +243,7 @@
                             <span class="input-group-text">R$</span>
                             <input id="vgv_res_coberta_priv" type="text" inputmode="numeric"
                                 class="form-control text-center" placeholder="Ex: 5.000,00" aria-label="Username"
-                                aria-describedby="equivalencia_fechada">
+                                >
                             <span class="input-group-text">/m²</span>
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -269,7 +269,7 @@
                             <span class="input-group-text">R$</span>
                             <input id="vgv_res_fechada_priv" type="text" inputmode="numeric"
                                 class="form-control text-center" placeholder="Ex: 5.000,00" aria-label="Username"
-                                aria-describedby="equivalencia_fechada">
+                                >
                             <span class="input-group-text">/m²</span>
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -297,7 +297,7 @@
                             <span class="input-group-text">R$</span>
                             <input id="vgv_com" type="text" inputmode="numeric" class="form-control text-center"
                                 placeholder="Ex: 5.000,00" aria-label="Username"
-                                aria-describedby="equivalencia_fechada">
+                                >
                             <span class="input-group-text">/m²</span>
                         </div>
                         <div class="alert alert-light" role="alert">
@@ -388,11 +388,8 @@
     <script>
         $('#cub').mask("#.##0,00", { reverse: true });
         $('#area_const_aberta').mask("#.##0,00", { reverse: true });
-        $('#equivalencia_aberta').mask("#.##0,00", { reverse: true });
         $('#area_const_coberta').mask("#.##0,00", { reverse: true });
-        $('#equivalencia_coberta').mask("#.##0,00", { reverse: true });
         $('#area_const_fechada').mask("#.##0,00", { reverse: true });
-        $('#equivalencia_fechada').mask("#.##0,00", { reverse: true });
         $('#acrescimo').mask("#.##0,00", { reverse: true });
         $('#acrescimo_direto').mask("#.##0,00", { reverse: true });
         $('#area_res_aberta_priv').mask("#.##0,00", { reverse: true });
