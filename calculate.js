@@ -42,13 +42,39 @@ const final_resultado_el = document.getElementById("final_resultado")
 // funcoes de unidades
 
 const _fmtBR = (n, digits = 2) =>
-  new Intl.NumberFormat("pt-BR", { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(Number(n));
+    new Intl.NumberFormat("pt-BR", { minimumFractionDigits: digits, maximumFractionDigits: digits }).format(Number(n));
 
-const brl = (n) => `R$ ${_fmtBR(n, 2)}`;                 // R$ 1.234,56
-const m2  = (n) => `${_fmtBR(n, 2)}m²`;                  // 1.234,56m²
-const brlPorM2 = (n) => `R$ ${_fmtBR(n, 2)}/m²`;         // R$ 1.234,56/m²
-const percentBR = (n, digits = 2) => `${_fmtBR((Number(n) <= 1 && Number(n) >= -1) ? Number(n) * 100 : n, digits)}%`;
-const get_num_chars = (s) => Number(s.replace(".","").replace(",","."));
+const _invalidOr = (n, ok) => {
+    const v = Number(n);
+    return Number.isFinite(v) ? ok(v) : " (Inválido)";
+};
+
+const brl = (n) => _invalidOr(n, (v) => `R$ ${_fmtBR(v, 2)}`);                 // R$ 1.234,56
+const m2 = (n) => _invalidOr(n, (v) => `${_fmtBR(v, 2)}m²`);                   // 1.234,56m²
+const brlPorM2 = (n) => _invalidOr(n, (v) => `R$ ${_fmtBR(v, 2)}/m²`);         // R$ 1.234,56/m²
+const percentBR = (n, digits = 2) =>
+    _invalidOr(n, (v) => {
+        const x = (v <= 1 && v >= -1) ? v * 100 : v;
+        return `${_fmtBR(x, digits)}%`;
+    });
+function get_num_chars(value) {
+    // Aceita: "3.100,12", "3100,12", "3.100", "3100", number, etc.
+    if (value === null || value === undefined) return NaN;
+    if (typeof value === "number") return value;
+
+    const s = String(value).trim();
+    if (!s) return NaN;
+
+    // Remove espaços e separadores de milhar ".", troca decimal "," por "."
+    const normalized = s
+        .replace(/\s/g, "")
+        .replace(/\./g, "")
+        .replace(",", ".");
+
+    const n = Number(normalized);
+    return Number.isFinite(n) ? n : NaN;
+}
+
 
 function update() {
     const cub_value = get_num_chars(cub_el.value);
